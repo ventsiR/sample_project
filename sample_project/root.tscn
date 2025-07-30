@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbrl1s8t154gf"]
+
+[ext_resource type="Script" uid="uid://c1l11yxn1mx05" path="res://hand.gd" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://d7ceww13oxmt" path="res://root.gd" id="1_pyidc"]
+
+[node name="Root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyidc")
+
+[node name="Hand" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 340.0
+offset_top = 456.0
+offset_right = 800.0
+offset_bottom = 607.0
+script = ExtResource("1_pq8q7")
+
+[node name="CardToRoot" type="Button" parent="."]
+offset_left = 656.0
+offset_top = 16.0
+offset_right = 886.0
+offset_bottom = 101.0
+text = "Add Card to Root"
+
+[node name="CardToHand" type="Button" parent="."]
+offset_left = 134.0
+offset_top = 19.0
+offset_right = 364.0
+offset_bottom = 104.0
+text = "Add Card to Hand"
+
+[connection signal="button_up" from="CardToRoot" to="." method="_on_card_to_root_button_up"]
+[connection signal="button_up" from="CardToHand" to="Hand" method="_on_card_to_hand_button_up"]
