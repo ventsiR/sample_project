@@ -84,9 +84,9 @@ However when I try to achieve the same through code I don't have much success.
 
 When I run the project:
 
-* the Add to Root button successfully adds the image, but the scaled down CardText is proportionally different to the scaled down CardImage.
+* the Add to Root button doesn't display a new card at all.
 
-* the Add to Hand button doesn't display a new card at all.
+* the Add to Hand button successfully adds the image in the place it should, but the scaled down CardText is proportionally different to the scaled down CardImage.
 
 ---
 
